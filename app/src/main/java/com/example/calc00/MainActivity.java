@@ -3,6 +3,7 @@ package com.example.calc00;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,7 +16,10 @@ public class MainActivity extends AppCompatActivity {
     Button subtracaoButton;
     Button multiplicacaoButton;
     Button divisaoButton;
+    //Button botaoInicial;
     TextView resultadoTextView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         vincularComponentes();
         criarListeners();
     }
+
     private void vincularComponentes() {
         numero1EditText = findViewById(R.id.numero1EditText);
         numero2EditText = findViewById(R.id.numero2EditText);
@@ -31,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         multiplicacaoButton = findViewById(R.id.multiplicacaoButton);
         divisaoButton = findViewById(R.id.divisaoButton);
         resultadoTextView = findViewById(R.id.resultadoTextView);
+        //botaoInicial = findViewById(R.id.botaoInicial);
+
     }
     private void criarListeners() {
         adicaoButton.setOnClickListener(evt -> adicionar());
@@ -60,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         String numero1String = numero1EditText.getText().toString();
         String numero2String = numero2EditText.getText().toString();
         if (numero1String.isEmpty() || numero2String.isEmpty()) {
-            Toast.makeText(this, "Digite dois números",
+            Toast.makeText(this, "Insira um valor no campo",
                     Toast.LENGTH_LONG).show();
             return;
         }
@@ -76,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         String numero1String = numero1EditText.getText().toString();
         String numero2String = numero2EditText.getText().toString();
         if (numero1String.isEmpty() || numero2String.isEmpty()) {
-            Toast.makeText(this, "Digite dois números",
+            Toast.makeText(this, "Insira um valor no campo",
                     Toast.LENGTH_LONG).show();
             return;
         }
@@ -92,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         String numero1String = numero1EditText.getText().toString();
         String numero2String = numero2EditText.getText().toString();
         if (numero1String.isEmpty() || numero2String.isEmpty()) {
-            Toast.makeText(this, "Digite dois números",
+            Toast.makeText(this, "Insira um valor no campo",
                     Toast.LENGTH_LONG).show();
             return;
         }
